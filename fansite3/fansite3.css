@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pirata+One&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch&display=swap');
+
+
+
+/*partie du hamburger button*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "pirata one";
+    background-color: #752121;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    position: relative;
+    width: 100%; /* Prend toute la largeur */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: rgb(157, 0, 0);
+    text-decoration: none;
+}
+
+.hamburger-checkbox {
+    display: none; /* Cacher l'input checkbox */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Styles pour le mode responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Cacher les liens par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste selon la hauteur de la navbar */
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger-checkbox:checked + .hamburger + .nav-links {
+        display: flex; /* Afficher les liens lorsque le hamburger est coché */
+    }
+}
+
+/*partie des containers*/
+
+
+h1 { 
+    font-family: "pirata one";
+
+}
+
+
+
+.container {
+    background-color: rgb(157, 0, 0);
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrer le texte dans le conteneur */
+}
+
+.title {
+    font-size: 30px;
+    margin: 0; /* Supprimer la marge par défaut */
+}
+
+.subtitle {
+    font-size: 16px;
+    font-family:"bebas neue";
+    color: #080808; /* Couleur du sous-texte */
+    margin-top: 8px; /* Espace entre le titre et le sous-texte */
+}
+
+
+.category-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Largeur maximale */
+    margin: 20px; /* Espace autour du conteneur */
+    float: left; /* Aligner le conteneur à gauche */
+    background-color: rgb(157, 0, 0);
+}
+
+.category-title {
+    font-family: "pirata one";
+    font-size: 30px; /* Taille du titre */
+    margin: 0; /* Supprime la marge par défaut */
+    color: #000000; /* Couleur du titre */
+}
+
+.category-description {
+    font-family: "bebas neue";
+    font-size: 18px; /* Taille de la description */
+    color: #000000; /* Couleur de la description */
+    margin: 10px 0; /* Espace autour de la description */
+}
+
+.category-text {
+    font-family: "bebas neue";
+    font-size: 16px; /* Taille du texte additionnel */
+    color: #000000; /* Couleur du texte additionnel */
+}
+
+
+
+
+/*partie container 2 tournées*/
+
+.container-row {
+    display: flex; /* Aligne les conteneurs sur une ligne */
+    justify-content: space-between; /* Espace entre les conteneurs */
+    margin: 20px; /* Espace autour de chaque ligne */
+}
+
+.container-left, .container-right, .container-images {
+    background-color: rgb(157, 0, 0); /* Couleur de fond */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Largeur de chaque conteneur (50% moins l'espace entre) */
+    margin: 0 10px; /* Espace horizontal entre les conteneurs */
+    box-sizing: border-box; /* Inclure le rembourrage et la bordure dans la largeur */
+}
+
+.title {
+    font-family: "pirata one";
+    font-size: 30px;
+   
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.subtitle {
+    font-family: "bebas neue";
+    font-size: 16px;
+    color: #000000; /* Couleur du sous-texte */
+    margin-top: 8px; /* Espace entre le titre et le sous-texte */
+}
+
+.tour-title {
+    font-family: "pirata one";
+    font-size: 20px; /* Taille du titre des tournées */
+    margin-top: 20px; /* Espace au-dessus du titre des tournées */
+    color: #000000; /* Couleur du titre */
+}
+
+.tour-dates {
+    font-family: "bebas neue";
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le rembourrage par défaut */
+    margin-top: 10px; /* Espace au-dessus de la liste */
+}
+
+.tour-dates li {
+    font-family: "bebas neue";
+    font-size: 16px; /* Taille du texte des dates */
+    color: #000000; /* Couleur du texte des dates */
+    margin: 5px 0; /* Espace entre les dates */
+}
+
+h2 {
+    font-family: "pirata one";
+    
+    font-size: 30px;
+}
+
+
+
+/*slideshow 2 img*/
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+.slide {
+    display: none;
+    width: 100%;
+}
+input[type="radio"] {
+    display: none;
+}
+#slide1:checked ~ .slides .slide1,
+#slide2:checked ~ .slides .slide2,
+#slide3:checked ~ .slides .slide3 {
+    display: block;
+}
+.slides {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuste selon la taille de tes images */
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+.navigation label {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #eee;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.navigation label:hover {
+    background-color: #ddd;
+}
+/*fin slideshow*/
+
+
+
+
+/*rs etc*/
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.socials {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+.merch a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.merch a:hover {
+    text-decoration: underline;
+}
+/*fin rs etc*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries  */
+@media (max-width: 768px) {
+    .container-left, .container-right, .container-images, .container-social {
+        width: calc(100% - 20px); /* Pleine largeur sur petits écrans */
+        margin: 10px 0; /* Espace vertical entre les conteneurs */
+    }
+}
